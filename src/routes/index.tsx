@@ -1,4 +1,4 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import {
   routeAction$,
   z,
@@ -57,6 +57,13 @@ export default component$(() => {
   const timezone = useSignal(
     Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",
   );
+
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(() => {
+    // The server's timezone might not be the same as the user's timezone,
+    // so we update on the client side.
+    timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
+  });
 
   return (
     <div class="flex h-full w-full flex-col items-center justify-center">
