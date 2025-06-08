@@ -47,3 +47,4 @@ functions/**/*.js
 # wrangler files
 .wrangler
 .dev.vars*
+.env.local
