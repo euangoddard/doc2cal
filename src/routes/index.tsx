@@ -74,9 +74,14 @@ export default component$(() => {
             <p class="mb-4">
               Convert your documents into calendar events with ease.
             </p>
-            <p>
+            <p class="mb-4">
               Get started by adding your document and we'll extract the events!
             </p>
+            <div>
+              <div class="status status-info mr-2 animate-bounce" />
+              Extracting might take some time depending on how complex your
+              document is!
+            </div>
           </div>
           <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <div class="card-body">
