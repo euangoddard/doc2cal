@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import {
   type DocumentHead,
+  Link,
   routeLoader$,
   useLocation,
   useNavigate,
@@ -76,7 +77,7 @@ export default component$(() => {
 
       <div class="divider" />
 
-      <div class="mx-auto mb-8 grid max-w-lg grid-cols-[48px_1fr] gap-4">
+      <div class="mx-auto mb-4 grid max-w-lg grid-cols-[48px_1fr] gap-4">
         {Object.entries(groupedEvents).map(([key, events]) => (
           <DayEvents
             key={key}
@@ -85,6 +86,12 @@ export default component$(() => {
             exportFormat={calendarFormat.value as any}
           />
         ))}
+      </div>
+
+      <div class="mx-auto max-w-lg pb-8">
+        <Link href="/" class="btn btn-primary btn-block">
+          Extract from another document
+        </Link>
       </div>
     </div>
   );
