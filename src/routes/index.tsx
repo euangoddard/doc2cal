@@ -150,7 +150,6 @@ export const useExtractEvents = routeAction$(
   async (formData, { fail, env, platform, redirect }) => {
     const file = formData["file"];
     if (!file || !(file instanceof File)) {
-      console.error("No file provided or invalid file type.");
       return fail(400, {
         message: "Invalid file type. Please upload a valid file.",
       });
