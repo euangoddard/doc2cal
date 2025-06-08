@@ -61,7 +61,7 @@ export default component$(() => {
               key={format.key}
               class={[
                 "btn btn-sm join-item",
-                { "btn-active": calendarFormat.value === format.key },
+                { "btn-secondary": calendarFormat.value === format.key },
               ]}
               onClick$={async () => {
                 const url = new URL(loc.url);
