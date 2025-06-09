@@ -67,7 +67,7 @@ export default component$(() => {
 
   return (
     <div class="flex h-full w-full flex-col items-center justify-center">
-      <div class="hero bg-base-200 p-4">
+      <div class="hero bg-primary-content rounded-lg p-4 shadow-lg">
         <div class="hero-content flex-col gap-8 lg:flex-row">
           <div class="text-center lg:text-left">
             <h1 class="mb-8 text-5xl font-bold">doc2cal</h1>
